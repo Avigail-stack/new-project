@@ -16,6 +16,7 @@ document.querySelector('#app').innerHTML = `
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="data-stream-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title fade-in">NeuroWave AI</h1>
       <p class="hero-subtitle fade-in-delay-1">Read your mind. Literally.</p>
@@ -35,6 +36,8 @@ document.querySelector('#app').innerHTML = `
               <div class="wave-line wave-2"></div>
               <div class="wave-line wave-3"></div>
               <div class="wave-line wave-4"></div>
+              <div class="wave-line wave-5"></div>
+              <div class="data-particles"></div>
             </div>
           </div>
         </div>
@@ -283,3 +286,45 @@ window.addEventListener('scroll', () => {
 
   lastScroll = currentScroll
 })
+
+// Parallax effect for hero device and feature visuals
+const parallaxElements = document.querySelectorAll('.hero-device, .feature-visual, .ai-chip-visual, .dashboard-visual, .privacy-visual')
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset
+
+  parallaxElements.forEach((element, index) => {
+    const rect = element.getBoundingClientRect()
+    const elementTop = rect.top + scrolled
+    const elementHeight = element.offsetHeight
+    const viewportHeight = window.innerHeight
+
+    // Only apply parallax when element is in or near viewport
+    if (rect.top < viewportHeight && rect.bottom > 0) {
+      const scrollProgress = (scrolled + viewportHeight - elementTop) / (viewportHeight + elementHeight)
+      const parallaxSpeed = 0.3 + (index % 3) * 0.1 // Vary speed by element
+      const yOffset = (scrollProgress - 0.5) * 100 * parallaxSpeed
+
+      element.style.transform = `translateY(${yOffset}px)`
+    }
+  })
+})
+
+// Mouse move effect on hero device
+const heroDevice = document.querySelector('.hero-device')
+if (heroDevice) {
+  document.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e
+    const { innerWidth, innerHeight } = window
+
+    // Calculate mouse position as percentage from center
+    const xPercent = (clientX / innerWidth - 0.5) * 2
+    const yPercent = (clientY / innerHeight - 0.5) * 2
+
+    // Apply subtle 3D tilt effect
+    const tiltX = yPercent * 10
+    const tiltY = -xPercent * 10
+
+    heroDevice.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
+  })
+}
