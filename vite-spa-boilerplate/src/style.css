@@ -319,13 +319,13 @@ a:hover {
   box-shadow: 0 12px 35px rgba(110, 193, 228, 0.4);
 }
 
-/* ===== Device Mockup ===== */
+/* ===== Video Container ===== */
 .hero-device {
   margin-top: 60px;
 }
 
-.device-mockup {
-  max-width: 600px;
+.video-container {
+  max-width: 800px;
   margin: 0 auto;
   padding: 16px;
   background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-accent-green) 100%);
@@ -337,6 +337,19 @@ a:hover {
   position: relative;
   animation: float 6s ease-in-out infinite, deviceGlow 3s ease-in-out infinite;
   transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.02);
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  background: #000;
 }
 
 @keyframes float {
@@ -357,17 +370,6 @@ a:hover {
       0 0 140px rgba(110, 193, 228, 0.6),
       inset 0 0 100px rgba(255, 255, 255, 0.15);
   }
-}
-
-.device-screen {
-  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
-  border-radius: 20px;
-  padding: 40px;
-  min-height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(110, 193, 228, 0.2);
 }
 
 .brain-wave-visual {

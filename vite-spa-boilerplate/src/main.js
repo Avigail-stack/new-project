@@ -29,17 +29,14 @@ document.querySelector('#app').innerHTML = `
         <button class="btn-secondary">Watch the Film</button>
       </div>
       <div class="hero-device fade-in-delay-4">
-        <div class="device-mockup">
-          <div class="device-screen">
-            <div class="brain-wave-visual">
-              <div class="wave-line wave-1"></div>
-              <div class="wave-line wave-2"></div>
-              <div class="wave-line wave-3"></div>
-              <div class="wave-line wave-4"></div>
-              <div class="wave-line wave-5"></div>
-              <div class="data-particles"></div>
-            </div>
-          </div>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/oVn8uQuTw_o?autoplay=1&mute=1&loop=1&playlist=oVn8uQuTw_o&controls=0&modestbranding=1&rel=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     </div>
