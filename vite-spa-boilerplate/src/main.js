@@ -1,10 +1,13 @@
 import './style.css'
 
 document.querySelector('#app').innerHTML = `
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
   <!-- Navigation -->
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-content">
-      <div class="nav-logo">NeuroWave</div>
+      <div class="nav-logo" tabindex="0" role="link" aria-label="NeuroWave home">NeuroWave</div>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#technology">Technology</a></li>
@@ -15,10 +18,10 @@ document.querySelector('#app').innerHTML = `
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="data-stream-overlay"></div>
+  <section class="hero" id="main-content" role="banner" aria-label="Hero section">
+    <div class="data-stream-overlay" aria-hidden="true"></div>
     <div class="hero-content">
-      <div class="hero-badge fade-in">🚀 Limited Pre-Order • Only 5,000 Units Available • Ships Q2 2025</div>
+      <div class="hero-badge fade-in" role="status" aria-live="polite">Limited Pre-Order • Only 5,000 Units Available • Ships Q2 2025</div>
       <h1 class="hero-title fade-in">NeuroWave AI</h1>
       <p class="hero-subtitle fade-in-delay-1">Unlock Your Brain's Hidden Potential</p>
       <p class="hero-description fade-in-delay-2">
@@ -26,10 +29,10 @@ document.querySelector('#app').innerHTML = `
         <strong>Join 50,000+ innovators, athletes, and entrepreneurs</strong> who are transforming how they think, focus, and perform.
       </p>
       <div class="hero-cta fade-in-delay-3">
-        <button class="btn-primary">Reserve Your NeuroWave - $500 Deposit</button>
-        <button class="btn-secondary">Watch How It Works (2 min)</button>
+        <button class="btn-primary" aria-label="Reserve your NeuroWave device with $500 deposit">Reserve Your NeuroWave - $500 Deposit</button>
+        <button class="btn-secondary" aria-label="Watch 2 minute video about how it works">Watch How It Works (2 min)</button>
       </div>
-      <p class="hero-offer fade-in-delay-3">🎁 Pre-order today: Save $400 + Get 1 Year of Pro AI Features FREE ($299 value)</p>
+      <p class="hero-offer fade-in-delay-3">Pre-order today: Save $400 + Get 1 Year of Pro AI Features FREE ($299 value)</p>
       <div class="hero-device fade-in-delay-4">
         <div class="video-container">
           <iframe
@@ -634,22 +637,26 @@ document.querySelector('#app').innerHTML = `
         Join <strong>120,000+ people</strong> on the waitlist to stay updated.<br />
         Get exclusive launch notifications, expert brain optimization tips, and special insider pricing when we go live.
       </p>
-      <form class="waitlist-form" id="waitlistForm">
+      <form class="waitlist-form" id="waitlistForm" aria-label="Waitlist signup form">
         <div class="form-group">
+          <label for="emailInput" class="visually-hidden">Email address</label>
           <input
             type="email"
             id="emailInput"
             class="email-input"
-            placeholder="Enter your email to stay in the loop"
+            placeholder="Enter your email address"
             required
             autocomplete="email"
+            aria-required="true"
+            aria-describedby="form-note"
+            aria-invalid="false"
           />
-          <button type="submit" class="btn-waitlist">Join Free Waitlist</button>
+          <button type="submit" class="btn-waitlist" aria-label="Join waitlist">Join Free Waitlist</button>
         </div>
-        <p class="form-note">✓ Exclusive insider updates • ✓ No spam, ever • ✓ Unsubscribe anytime</p>
+        <p class="form-note" id="form-note">Exclusive insider updates • No spam, ever • Unsubscribe anytime</p>
       </form>
-      <div class="success-message" id="successMessage">
-        <div class="success-icon">✓</div>
+      <div class="success-message" id="successMessage" role="status" aria-live="polite" aria-atomic="true">
+        <div class="success-icon" aria-hidden="true">✓</div>
         <h3>Welcome to the NeuroWave Community!</h3>
         <p>You're officially on the list. Check your inbox for a special welcome gift and insider tips to start optimizing your brain today.</p>
       </div>
@@ -657,8 +664,12 @@ document.querySelector('#app').innerHTML = `
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
+      <div class="footer-brand">
+        <h3>NeuroWave AI</h3>
+        <p>The world's first consumer brain-computer interface. Transform how you think, focus, and perform.</p>
+      </div>
       <div class="footer-section">
         <h4>Product</h4>
         <ul>
@@ -671,24 +682,29 @@ document.querySelector('#app').innerHTML = `
       <div class="footer-section">
         <h4>Support</h4>
         <ul>
-          <li><a href="#">Documentation</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Warranty</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" aria-label="Contact us">Contact Us</a></li>
+          <li><a href="#" aria-label="View documentation">Documentation</a></li>
+          <li><a href="#" aria-label="Warranty information">Warranty</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Company</h4>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Research</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#" aria-label="About NeuroWave AI">About</a></li>
+          <li><a href="#" aria-label="Research and development">Research</a></li>
+          <li><a href="#" aria-label="Career opportunities">Careers</a></li>
+          <li><a href="#" aria-label="Privacy policy">Privacy</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 NeuroWave AI. All rights reserved.</p>
+      <div class="footer-social" role="navigation" aria-label="Social media links">
+        <a href="#" aria-label="Follow us on Twitter">𝕏</a>
+        <a href="#" aria-label="Follow us on LinkedIn">in</a>
+        <a href="#" aria-label="Follow us on Instagram">📷</a>
+      </div>
     </div>
   </footer>
 `
@@ -865,18 +881,27 @@ document.querySelectorAll('.qna-item').forEach(item => {
   })
 })
 
-// Waitlist form functionality
+// Waitlist form functionality with accessibility
 const waitlistForm = document.getElementById('waitlistForm')
 const successMessage = document.getElementById('successMessage')
 const emailInput = document.getElementById('emailInput')
 
 if (waitlistForm && successMessage && emailInput) {
+  // Real-time validation for accessibility
+  emailInput.addEventListener('input', (e) => {
+    if (emailInput.validity.valid) {
+      emailInput.setAttribute('aria-invalid', 'false')
+    } else if (emailInput.value.length > 0) {
+      emailInput.setAttribute('aria-invalid', 'true')
+    }
+  })
+
   waitlistForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const email = emailInput.value.trim()
 
-    if (email) {
+    if (email && emailInput.validity.valid) {
       // Mock data - store in console for demonstration
       console.log('Waitlist signup:', {
         email: email,
@@ -888,12 +913,19 @@ if (waitlistForm && successMessage && emailInput) {
       waitlistForm.style.display = 'none'
       successMessage.style.display = 'flex'
 
+      // Focus on success message for screen readers
+      successMessage.focus()
+
       // Optional: Reset form and switch back after 5 seconds
       // setTimeout(() => {
       //   waitlistForm.style.display = 'flex'
       //   successMessage.style.display = 'none'
       //   emailInput.value = ''
+      //   emailInput.setAttribute('aria-invalid', 'false')
       // }, 5000)
+    } else {
+      emailInput.setAttribute('aria-invalid', 'true')
+      emailInput.focus()
     }
   })
 }
