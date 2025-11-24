@@ -284,44 +284,98 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll
 })
 
-// Parallax effect for hero device and feature visuals
-const parallaxElements = document.querySelectorAll('.hero-device, .feature-visual, .ai-chip-visual, .dashboard-visual, .privacy-visual')
+// Enhanced parallax effect with multiple layers
+const parallaxLayers = {
+  slow: document.querySelectorAll('.feature-visual, .ai-chip-visual, .dashboard-visual, .privacy-visual'),
+  medium: document.querySelectorAll('.feature-section'),
+  fast: document.querySelectorAll('.hero::before, .hero::after')
+}
 
-window.addEventListener('scroll', () => {
+let ticking = false
+
+function updateParallax() {
   const scrolled = window.pageYOffset
+  const viewportHeight = window.innerHeight
 
-  parallaxElements.forEach((element, index) => {
+  // Slow parallax layer
+  parallaxLayers.slow.forEach((element) => {
     const rect = element.getBoundingClientRect()
-    const elementTop = rect.top + scrolled
-    const elementHeight = element.offsetHeight
-    const viewportHeight = window.innerHeight
 
-    // Only apply parallax when element is in or near viewport
     if (rect.top < viewportHeight && rect.bottom > 0) {
+      const elementTop = rect.top + scrolled
+      const elementHeight = element.offsetHeight
       const scrollProgress = (scrolled + viewportHeight - elementTop) / (viewportHeight + elementHeight)
-      const parallaxSpeed = 0.3 + (index % 3) * 0.1 // Vary speed by element
-      const yOffset = (scrollProgress - 0.5) * 100 * parallaxSpeed
+      const yOffset = (scrollProgress - 0.5) * 80
 
-      element.style.transform = `translateY(${yOffset}px)`
+      element.style.transform = `translate3d(0, ${yOffset}px, 0)`
     }
   })
+
+  // Medium parallax layer
+  parallaxLayers.medium.forEach((element) => {
+    const rect = element.getBoundingClientRect()
+
+    if (rect.top < viewportHeight && rect.bottom > 0) {
+      const elementTop = rect.top + scrolled
+      const elementHeight = element.offsetHeight
+      const scrollProgress = (scrolled + viewportHeight - elementTop) / (viewportHeight + elementHeight)
+      const yOffset = (scrollProgress - 0.5) * 40
+
+      element.style.transform = `translate3d(0, ${yOffset}px, 0)`
+    }
+  })
+
+  ticking = false
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateParallax)
+    ticking = true
+  }
 })
 
-// Mouse move effect on hero device
+// Mouse move effect on hero device with smooth parallax
 const heroDevice = document.querySelector('.hero-device')
+let mouseX = 0
+let mouseY = 0
+let currentX = 0
+let currentY = 0
+
 if (heroDevice) {
   document.addEventListener('mousemove', (e) => {
     const { clientX, clientY } = e
     const { innerWidth, innerHeight } = window
 
     // Calculate mouse position as percentage from center
-    const xPercent = (clientX / innerWidth - 0.5) * 2
-    const yPercent = (clientY / innerHeight - 0.5) * 2
+    mouseX = (clientX / innerWidth - 0.5) * 2
+    mouseY = (clientY / innerHeight - 0.5) * 2
+  })
+
+  // Smooth animation loop for mouse parallax
+  function animateMouseParallax() {
+    // Lerp (linear interpolation) for smooth movement
+    currentX += (mouseX - currentX) * 0.1
+    currentY += (mouseY - currentY) * 0.1
 
     // Apply subtle 3D tilt effect
-    const tiltX = yPercent * 10
-    const tiltY = -xPercent * 10
+    const tiltX = currentY * 10
+    const tiltY = -currentX * 10
 
-    heroDevice.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`
+    heroDevice.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1)`
+
+    requestAnimationFrame(animateMouseParallax)
+  }
+
+  animateMouseParallax()
+}
+
+// Background parallax for hero section
+const hero = document.querySelector('.hero')
+if (hero) {
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset
+    const rate = scrolled * 0.5
+    hero.style.backgroundPosition = `center ${-rate}px`
   })
 }

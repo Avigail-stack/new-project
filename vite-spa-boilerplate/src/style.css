@@ -152,6 +152,8 @@ a:hover {
   padding: 100px 20px 60px;
   position: relative;
   overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .hero::before {
@@ -322,6 +324,8 @@ a:hover {
 /* ===== Video Container ===== */
 .hero-device {
   margin-top: 60px;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 .video-container {
@@ -593,6 +597,7 @@ a:hover {
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  will-change: transform, opacity;
 }
 
 .feature-section.visible {
@@ -665,12 +670,18 @@ a:hover {
   text-decoration: underline;
 }
 
+.feature-visual {
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
 /* ===== AI Chip Visual ===== */
 .ai-chip-visual {
   position: relative;
   width: 300px;
   height: 300px;
   margin: 0 auto;
+  will-change: transform;
 }
 
 .chip-core {
@@ -732,6 +743,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  will-change: transform;
 }
 
 .dashboard-card {
@@ -774,6 +786,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   height: 300px;
+  will-change: transform;
 }
 
 .lock-icon {
