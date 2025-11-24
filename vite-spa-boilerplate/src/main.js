@@ -18,16 +18,18 @@ document.querySelector('#app').innerHTML = `
   <section class="hero">
     <div class="data-stream-overlay"></div>
     <div class="hero-content">
+      <div class="hero-badge fade-in">🚀 Limited Pre-Order • Only 5,000 Units Available • Ships Q2 2025</div>
       <h1 class="hero-title fade-in">NeuroWave AI</h1>
-      <p class="hero-subtitle fade-in-delay-1">Read your mind. Literally.</p>
+      <p class="hero-subtitle fade-in-delay-1">Unlock Your Brain's Hidden Potential</p>
       <p class="hero-description fade-in-delay-2">
-        The world's most advanced brain waves signal AI reader.<br />
-        Experience neural technology that understands you.
+        The world's first consumer brain-computer interface that reads, understands, and optimizes your mental performance in real-time.<br />
+        <strong>Join 50,000+ innovators, athletes, and entrepreneurs</strong> who are transforming how they think, focus, and perform.
       </p>
       <div class="hero-cta fade-in-delay-3">
-        <button class="btn-primary">Pre-order Now</button>
-        <button class="btn-secondary">Watch the Film</button>
+        <button class="btn-primary">Reserve Your NeuroWave - $500 Deposit</button>
+        <button class="btn-secondary">Watch How It Works (2 min)</button>
       </div>
+      <p class="hero-offer fade-in-delay-3">🎁 Pre-order today: Save $400 + Get 1 Year of Pro AI Features FREE ($299 value)</p>
       <div class="hero-device fade-in-delay-4">
         <div class="video-container">
           <iframe
@@ -195,6 +197,97 @@ document.querySelector('#app').innerHTML = `
           <li>Dedicated support</li>
         </ul>
         <button class="btn-price">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A Section -->
+  <section class="qna-section" id="faq">
+    <h2 class="section-title">Questions & Answers</h2>
+    <div class="qna-container">
+      <div class="qna-item">
+        <div class="qna-question">
+          <h3>How does NeuroWave AI read brain signals?</h3>
+          <span class="qna-icon">+</span>
+        </div>
+        <div class="qna-answer">
+          <p>NeuroWave AI uses advanced EEG (electroencephalography) sensors to detect electrical activity in your brain. Our proprietary AI algorithms process these signals in real-time, identifying patterns across all five brain wave frequencies: Delta, Theta, Alpha, Beta, and Gamma.</p>
+        </div>
+      </div>
+      <div class="qna-item">
+        <div class="qna-question">
+          <h3>Is my brain data secure?</h3>
+          <span class="qna-icon">+</span>
+        </div>
+        <div class="qna-answer">
+          <p>Absolutely. All neural processing happens on-device with end-to-end encryption. Your brain data never leaves your device without your explicit permission. We follow medical-grade security standards and comply with all privacy regulations including HIPAA and GDPR.</p>
+        </div>
+      </div>
+      <div class="qna-item">
+        <div class="qna-question">
+          <h3>How long does the battery last?</h3>
+          <span class="qna-icon">+</span>
+        </div>
+        <div class="qna-answer">
+          <p>The NeuroWave provides up to 20 hours of continuous monitoring, while the NeuroWave Pro offers up to 24 hours. Both models support fast charging - just 15 minutes of charging provides 4 hours of use.</p>
+        </div>
+      </div>
+      <div class="qna-item">
+        <div class="qna-question">
+          <h3>Do I need any special training to use it?</h3>
+          <span class="qna-icon">+</span>
+        </div>
+        <div class="qna-answer">
+          <p>No special training required! NeuroWave AI is designed to be intuitive and user-friendly. Simply wear the device, open the companion app, and our AI guides you through setup in less than 5 minutes. The device automatically calibrates to your unique brain patterns.</p>
+        </div>
+      </div>
+      <div class="qna-item">
+        <div class="qna-question">
+          <h3>What's the difference between models?</h3>
+          <span class="qna-icon">+</span>
+        </div>
+        <div class="qna-answer">
+          <p>The standard NeuroWave offers essential neural reading with 16 channels, perfect for personal use. The Pro model features 32 channels for higher accuracy, advanced AI coaching, and priority support. The Research edition includes 64 channels, raw data export, and API access for institutional use.</p>
+        </div>
+      </div>
+      <div class="qna-item">
+        <div class="qna-question">
+          <h3>When will NeuroWave AI be available?</h3>
+          <span class="qna-icon">+</span>
+        </div>
+        <div class="qna-answer">
+          <p>We're currently in the final stages of production. Pre-orders will ship starting Q2 2025. Join our waitlist below to be notified when pre-orders open and receive exclusive early-bird pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist Section -->
+  <section class="waitlist-section">
+    <div class="waitlist-content">
+      <h2 class="waitlist-title">Join the Waitlist</h2>
+      <p class="waitlist-description">
+        Be the first to know when NeuroWave AI launches.<br />
+        Get exclusive early-bird pricing and priority access.
+      </p>
+      <form class="waitlist-form" id="waitlistForm">
+        <div class="form-group">
+          <input
+            type="email"
+            id="emailInput"
+            class="email-input"
+            placeholder="Enter your email address"
+            required
+            autocomplete="email"
+          />
+          <button type="submit" class="btn-waitlist">Join Waitlist</button>
+        </div>
+        <p class="form-note">We respect your privacy. No spam, ever.</p>
+      </form>
+      <div class="success-message" id="successMessage">
+        <div class="success-icon">✓</div>
+        <h3>You're on the list!</h3>
+        <p>Thank you for joining the waitlist. We'll notify you as soon as NeuroWave AI is available.</p>
       </div>
     </div>
   </section>
@@ -379,3 +472,73 @@ if (hero) {
     hero.style.backgroundPosition = `center ${-rate}px`
   })
 }
+
+// Q&A accordion functionality
+document.querySelectorAll('.qna-item').forEach(item => {
+  const question = item.querySelector('.qna-question')
+  const answer = item.querySelector('.qna-answer')
+  const icon = item.querySelector('.qna-icon')
+
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('active')
+
+    // Close all other items
+    document.querySelectorAll('.qna-item').forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active')
+        otherItem.querySelector('.qna-icon').textContent = '+'
+      }
+    })
+
+    // Toggle current item
+    if (isOpen) {
+      item.classList.remove('active')
+      icon.textContent = '+'
+    } else {
+      item.classList.add('active')
+      icon.textContent = '−'
+    }
+  })
+})
+
+// Waitlist form functionality
+const waitlistForm = document.getElementById('waitlistForm')
+const successMessage = document.getElementById('successMessage')
+const emailInput = document.getElementById('emailInput')
+
+if (waitlistForm && successMessage && emailInput) {
+  waitlistForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const email = emailInput.value.trim()
+
+    if (email) {
+      // Mock data - store in console for demonstration
+      console.log('Waitlist signup:', {
+        email: email,
+        timestamp: new Date().toISOString(),
+        source: 'waitlist-form'
+      })
+
+      // Hide form and show success message
+      waitlistForm.style.display = 'none'
+      successMessage.style.display = 'flex'
+
+      // Optional: Reset form and switch back after 5 seconds
+      // setTimeout(() => {
+      //   waitlistForm.style.display = 'flex'
+      //   successMessage.style.display = 'none'
+      //   emailInput.value = ''
+      // }, 5000)
+    }
+  })
+}
+
+// Observe Q&A and waitlist sections for scroll animations
+setTimeout(() => {
+  const qnaSection = document.querySelector('.qna-section')
+  const waitlistSection = document.querySelector('.waitlist-section')
+
+  if (qnaSection) observer.observe(qnaSection)
+  if (waitlistSection) observer.observe(waitlistSection)
+}, 100)
