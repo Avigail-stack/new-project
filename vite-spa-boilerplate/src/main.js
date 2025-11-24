@@ -44,16 +44,113 @@ document.querySelector('#app').innerHTML = `
     </div>
   </section>
 
+  <!-- Why NeuroWave Section -->
+  <section class="why-section" id="why">
+    <div class="why-header">
+      <h2 class="section-title">Why NeuroWave Changes Everything</h2>
+      <p class="section-subtitle">The difference between knowing your mind and mastering it</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🎯</div>
+        <h3 class="benefit-title">Peak Performance On Demand</h3>
+        <p class="benefit-description">
+          Athletes increase reaction time by 23%. Professionals enter deep focus states 3x faster.
+          Students retain information 40% better. NeuroWave doesn't just measure performance—it unlocks it.
+        </p>
+        <div class="benefit-stat">
+          <span class="stat-number">87%</span>
+          <span class="stat-label">report peak performance within 2 weeks</span>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🧘</div>
+        <h3 class="benefit-title">Master Stress & Anxiety</h3>
+        <p class="benefit-description">
+          Real-time biofeedback teaches your brain to regulate stress naturally. Users report 65% reduction
+          in anxiety episodes. Feel calm, collected, and in control—even in high-pressure situations.
+        </p>
+        <div class="benefit-stat">
+          <span class="stat-number">92%</span>
+          <span class="stat-label">experience better sleep quality</span>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💡</div>
+        <h3 class="benefit-title">Unlock Creative Flow</h3>
+        <p class="benefit-description">
+          Identify and amplify your most creative brain states. Writers, artists, and entrepreneurs
+          report breakthrough moments 2-3x more frequently. Never struggle with creative blocks again.
+        </p>
+        <div class="benefit-stat">
+          <span class="stat-number">78%</span>
+          <span class="stat-label">achieve flow state within first month</span>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🚀</div>
+        <h3 class="benefit-title">Accelerated Learning</h3>
+        <p class="benefit-description">
+          Optimize your brain for rapid learning. Know exactly when you're primed to absorb new information.
+          Medical students cut study time by 30% while improving test scores. Learn smarter, not harder.
+        </p>
+        <div class="benefit-stat">
+          <span class="stat-number">3.2x</span>
+          <span class="stat-label">faster skill acquisition on average</span>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3 class="benefit-title">Energy Without Caffeine</h3>
+        <p class="benefit-description">
+          Combat mental fatigue before it hits. NeuroWave predicts energy dips and guides you through
+          targeted mental exercises. 71% of users reduce caffeine consumption while feeling more energized.
+        </p>
+        <div class="benefit-stat">
+          <span class="stat-number">4.5hrs</span>
+          <span class="stat-label">average increase in productive hours daily</span>
+        </div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🎓</div>
+        <h3 class="benefit-title">Personalized Brain Training</h3>
+        <p class="benefit-description">
+          Your brain is unique. NeuroWave creates a custom training program based on YOUR neural patterns.
+          Unlike generic brain training apps, this adapts to you in real-time for maximum results.
+        </p>
+        <div class="benefit-stat">
+          <span class="stat-number">10x</span>
+          <span class="stat-label">more effective than standard meditation apps</span>
+        </div>
+      </div>
+    </div>
+    <div class="why-cta">
+      <h3 class="why-cta-title">Ready to Transform Your Mind?</h3>
+      <p class="why-cta-subtitle">Join thousands of high-performers who've already upgraded their brains</p>
+      <button class="btn-primary">Secure Your Pre-Order Now</button>
+      <p class="why-cta-note">30-day money-back guarantee • Free shipping • 2-year warranty included</p>
+    </div>
+  </section>
+
   <!-- Feature Section 1: AI Intelligence -->
   <section class="feature-section bg-light" id="features">
     <div class="feature-content">
       <div class="feature-text">
         <h2 class="feature-title">AI that thinks<br />like you do.</h2>
         <p class="feature-description">
-          Our advanced neural AI processes thousands of brain wave signals per second,
-          learning your unique patterns and providing insights you never knew were possible.
+          Our proprietary NeuroAI engine processes <strong>50,000 brain signals per second</strong>,
+          learning your unique neural patterns within 48 hours. It predicts your mental states before you're
+          even aware of them—alerting you to stress spikes, focus drops, and optimal performance windows.
+          <br /><br />
+          <strong>Real example:</strong> Sarah, a software engineer, receives an alert: "Your focus is dropping.
+          Take a 5-minute walk now." She does. Returns with 40% better code quality. That's NeuroAI at work.
         </p>
-        <a href="#" class="feature-link">Learn more about NeuroAI →</a>
+        <ul class="feature-list">
+          <li>Personalized mental state predictions with 96% accuracy</li>
+          <li>Adaptive AI coaching that evolves with your brain</li>
+          <li>Actionable insights you can use immediately</li>
+        </ul>
+        <a href="#" class="feature-link">See NeuroAI in action →</a>
       </div>
       <div class="feature-visual">
         <div class="ai-chip-visual">
@@ -70,12 +167,23 @@ document.querySelector('#app').innerHTML = `
   <section class="feature-section bg-dark">
     <div class="feature-content reverse">
       <div class="feature-text">
-        <h2 class="feature-title">Real-time insights.<br />Instant clarity.</h2>
+        <h2 class="feature-title">See inside your mind.<br />In real-time.</h2>
         <p class="feature-description">
-          Monitor your mental states in real-time with millisecond precision.
-          From focus levels to emotional patterns, see what's happening in your mind as it happens.
+          <strong>Millisecond-precision monitoring</strong> shows you exactly what's happening in your brain,
+          right now. Track focus intensity, stress levels, creative flow, emotional balance, and cognitive load—all
+          simultaneously on your smartphone or smartwatch.
+          <br /><br />
+          Know when you're in peak state for important meetings. Catch stress before it becomes burnout.
+          Identify the exact conditions that spark your best ideas. It's like having a personal brain coach
+          24/7.
         </p>
-        <a href="#" class="feature-link">Explore monitoring features →</a>
+        <ul class="feature-list">
+          <li>Live dashboard tracks 12+ mental metrics simultaneously</li>
+          <li>Smart alerts notify you of important brain state changes</li>
+          <li>Historical trends reveal patterns you never noticed</li>
+          <li>Compatible with Apple Health, Google Fit, and major wellness apps</li>
+        </ul>
+        <a href="#" class="feature-link">Explore the dashboard →</a>
       </div>
       <div class="feature-visual">
         <div class="dashboard-visual">
@@ -98,12 +206,21 @@ document.querySelector('#app').innerHTML = `
   <section class="feature-section bg-light">
     <div class="feature-content">
       <div class="feature-text">
-        <h2 class="feature-title">Your thoughts.<br />Your privacy.</h2>
+        <h2 class="feature-title">Your thoughts.<br />Your privacy.<br />Forever.</h2>
         <p class="feature-description">
-          All neural processing happens on-device with end-to-end encryption.
-          Your brain data never leaves your device without your explicit permission.
+          <strong>Zero-knowledge architecture.</strong> All neural processing happens on-device with military-grade
+          end-to-end encryption. Your brain data never touches our servers. Period.
+          <br /><br />
+          We can't see your thoughts. We can't sell your data. We can't hand it over to anyone—because
+          we literally don't have it. Your mind belongs to you, and only you.
         </p>
-        <a href="#" class="feature-link">Learn about our privacy commitment →</a>
+        <ul class="feature-list">
+          <li>HIPAA and GDPR compliant</li>
+          <li>Certified by independent security auditors</li>
+          <li>Open-source encryption protocols</li>
+          <li>You can delete all data with one tap—permanently</li>
+        </ul>
+        <a href="#" class="feature-link">Read our security whitepaper →</a>
       </div>
       <div class="feature-visual">
         <div class="privacy-visual">
@@ -111,6 +228,166 @@ document.querySelector('#app').innerHTML = `
             <div class="lock-body"></div>
             <div class="lock-shackle"></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="use-cases-section" id="use-cases">
+    <div class="use-cases-header">
+      <h2 class="section-title">Built For Real Life</h2>
+      <p class="section-subtitle">Whatever you're working on, NeuroWave helps you do it better</p>
+    </div>
+    <div class="use-cases-grid">
+      <div class="use-case-card">
+        <div class="use-case-emoji">💼</div>
+        <h3 class="use-case-title">Professionals & Executives</h3>
+        <p class="use-case-description">
+          Dominate back-to-back meetings without burnout. Make better decisions under pressure.
+          Know exactly when to tackle complex problems vs. routine tasks. Schedule your day
+          around your brain's natural rhythms.
+        </p>
+        <div class="use-case-quote">
+          "I closed 3 major deals in a month after identifying my peak negotiation windows."
+          <br />— <strong>Marcus T., VP of Sales</strong>
+        </div>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-emoji">🏃</div>
+        <h3 class="use-case-title">Athletes & Competitors</h3>
+        <p class="use-case-description">
+          Train your mental game as rigorously as your physical skills. Achieve pre-competition
+          calm instantly. Recover faster between events. Visualize success with optimal
+          brain-wave patterns.
+        </p>
+        <div class="use-case-quote">
+          "My reaction time improved 18%. That's the difference between gold and silver."
+          <br />— <strong>Alex K., Olympic Athlete</strong>
+        </div>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-emoji">🎨</div>
+        <h3 class="use-case-title">Creators & Artists</h3>
+        <p class="use-case-description">
+          Never miss your creative window again. Learn what triggers your flow state and
+          replicate it on demand. Break through blocks. Finish projects faster without
+          sacrificing quality.
+        </p>
+        <div class="use-case-quote">
+          "I wrote my entire album in 6 weeks. Usually takes me 6 months."
+          <br />— <strong>Jamie R., Music Producer</strong>
+        </div>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-emoji">🎓</div>
+        <h3 class="use-case-title">Students & Academics</h3>
+        <p class="use-case-description">
+          Study smarter, not longer. Optimize your brain for retention during learning sessions.
+          Reduce test anxiety. Know the perfect time to review material for maximum recall.
+        </p>
+        <div class="use-case-quote">
+          "From B- average to 3.9 GPA in one semester. Game changer."
+          <br />— <strong>David L., Medical Student</strong>
+        </div>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-emoji">🧘</div>
+        <h3 class="use-case-title">Wellness Enthusiasts</h3>
+        <p class="use-case-description">
+          Deepen your meditation practice with real-time feedback. Master breathwork and
+          mindfulness. Track your progress objectively. Achieve states of calm that took
+          monks years to master.
+        </p>
+        <div class="use-case-quote">
+          "Better than 10 years of meditation apps combined."
+          <br />— <strong>Sarah M., Yoga Instructor</strong>
+        </div>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-emoji">👨‍💻</div>
+        <h3 class="use-case-title">Tech Workers & Coders</h3>
+        <p class="use-case-description">
+          Enter deep work instantly. Prevent mental fatigue during long coding sessions.
+          Know when to debug vs. architect. Reduce context-switching costs. Work smarter,
+          not harder.
+        </p>
+        <div class="use-case-quote">
+          "Shipped more features in Q1 than all of last year. My manager thinks I'm superhuman."
+          <br />— <strong>Priya S., Software Engineer</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Section -->
+  <section class="social-proof-section">
+    <div class="social-proof-content">
+      <h2 class="section-title">Trusted By Industry Leaders</h2>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-big">50,000+</div>
+          <div class="stat-text">Pre-orders worldwide</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-big">4.9/5</div>
+          <div class="stat-text">Beta tester rating</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-big">89%</div>
+          <div class="stat-text">See results in week 1</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-big">$2.3M</div>
+          <div class="stat-text">In neuroscience R&D</div>
+        </div>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "I was skeptical, but after 2 weeks I'm a believer. My productivity has genuinely
+            doubled. I know exactly when I'm about to hit a wall and can prevent it. This is
+            the future of human performance."
+          </p>
+          <div class="testimonial-author">
+            <strong>Dr. Jennifer Hayes</strong>
+            <span>Neuroscientist, Stanford University</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "NeuroWave gave me an unfair advantage. I can predict my mental state hours in
+            advance and plan accordingly. It's like having insider knowledge about your own
+            brain. Worth every penny."
+          </p>
+          <div class="testimonial-author">
+            <strong>Michael Chen</strong>
+            <span>CEO, Tech Startup (Exited for $45M)</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "As someone who's tried every productivity hack imaginable, this is the only
+            thing that actually worked. Not a gimmick. Real, measurable improvement in focus,
+            creativity, and mental stamina."
+          </p>
+          <div class="testimonial-author">
+            <strong>Rachel Morrison</strong>
+            <span>Bestselling Author & Performance Coach</span>
+          </div>
+        </div>
+      </div>
+      <div class="social-proof-logos">
+        <p class="logos-subtitle">Featured In:</p>
+        <div class="logos-row">
+          <div class="logo-item">TechCrunch</div>
+          <div class="logo-item">Wired</div>
+          <div class="logo-item">Nature Neuroscience</div>
+          <div class="logo-item">MIT Tech Review</div>
+          <div class="logo-item">Fast Company</div>
         </div>
       </div>
     </div>
@@ -153,51 +430,138 @@ document.querySelector('#app').innerHTML = `
     </div>
   </section>
 
+  <!-- Limited Time Offer Section -->
+  <section class="limited-offer-section">
+    <div class="limited-offer-content">
+      <div class="offer-badge">⚡ LIMITED TIME PRE-ORDER OFFER</div>
+      <h2 class="offer-title">Save $400 + Get Premium Features FREE</h2>
+      <p class="offer-subtitle">
+        Pre-order in the next <strong>72 hours</strong> and receive:
+      </p>
+      <div class="offer-benefits">
+        <div class="offer-benefit">
+          <div class="offer-check">✓</div>
+          <div class="offer-text">
+            <strong>$400 OFF</strong> retail price (automatically applied)
+          </div>
+        </div>
+        <div class="offer-benefit">
+          <div class="offer-check">✓</div>
+          <div class="offer-text">
+            <strong>1 Year Pro AI Features</strong> ($299 value) — usually $24.99/month
+          </div>
+        </div>
+        <div class="offer-benefit">
+          <div class="offer-check">✓</div>
+          <div class="offer-text">
+            <strong>Priority Shipping</strong> — be among the first 1,000 to receive NeuroWave
+          </div>
+        </div>
+        <div class="offer-benefit">
+          <div class="offer-check">✓</div>
+          <div class="offer-text">
+            <strong>Exclusive Beta Access</strong> to upcoming features before public release
+          </div>
+        </div>
+        <div class="offer-benefit">
+          <div class="offer-check">✓</div>
+          <div class="offer-text">
+            <strong>Lifetime Priority Support</strong> — skip the queue forever
+          </div>
+        </div>
+      </div>
+      <div class="offer-timer">
+        <div class="timer-label">Offer expires in:</div>
+        <div class="timer-display">
+          <div class="timer-unit">
+            <span class="timer-number">71</span>
+            <span class="timer-label-small">Hours</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-unit">
+            <span class="timer-number">43</span>
+            <span class="timer-label-small">Minutes</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-unit">
+            <span class="timer-number">22</span>
+            <span class="timer-label-small">Seconds</span>
+          </div>
+        </div>
+      </div>
+      <p class="offer-disclaimer">
+        <strong>Only 847 units remaining</strong> at this price. After that, full retail price applies.
+      </p>
+    </div>
+  </section>
+
   <!-- Pricing Section -->
   <section class="pricing-section" id="buy">
     <h2 class="section-title">Choose Your NeuroWave</h2>
+    <p class="pricing-subtitle">30-day money-back guarantee • Free shipping • 2-year warranty</p>
     <div class="pricing-cards">
       <div class="price-card">
         <h3 class="price-model">NeuroWave</h3>
-        <p class="price-tagline">Essential neural reading</p>
+        <p class="price-tagline">Essential neural reading for personal growth</p>
+        <div class="price-strike">$2,899</div>
         <div class="price-amount">$2,499</div>
+        <div class="price-savings">Save $400 today</div>
         <ul class="price-features">
-          <li>16-channel EEG sensors</li>
-          <li>8-core NeuroAI processor</li>
-          <li>20-hour battery life</li>
-          <li>Standard monitoring features</li>
+          <li>✓ 16-channel EEG sensors</li>
+          <li>✓ 8-core NeuroAI processor</li>
+          <li>✓ 20-hour battery life</li>
+          <li>✓ Standard monitoring features</li>
+          <li>✓ Mobile app included</li>
+          <li>✓ Basic insights & alerts</li>
         </ul>
-        <button class="btn-price">Pre-order</button>
+        <button class="btn-price">Secure Your NeuroWave • $500 Deposit</button>
+        <p class="price-note">Remaining balance due at shipping</p>
       </div>
       <div class="price-card featured">
-        <div class="price-badge">Most Popular</div>
+        <div class="price-badge">🏆 BEST VALUE • MOST POPULAR</div>
         <h3 class="price-model">NeuroWave Pro</h3>
-        <p class="price-tagline">Professional-grade neural analysis</p>
+        <p class="price-tagline">Professional-grade for peak performers</p>
+        <div class="price-strike">$4,399</div>
         <div class="price-amount">$3,999</div>
+        <div class="price-savings">Save $400 + FREE Pro Features ($299/yr value)</div>
         <ul class="price-features">
-          <li>32-channel EEG sensors</li>
-          <li>16-core NeuroAI processor</li>
-          <li>24-hour battery life</li>
-          <li>Advanced AI insights</li>
-          <li>Real-time coaching</li>
-          <li>Priority support</li>
+          <li>✓ <strong>Everything in NeuroWave, plus:</strong></li>
+          <li>✓ 32-channel EEG sensors (2x precision)</li>
+          <li>✓ 16-core NeuroAI processor (2x faster)</li>
+          <li>✓ 24-hour battery life</li>
+          <li>✓ Advanced AI coaching & predictions</li>
+          <li>✓ Real-time performance optimization</li>
+          <li>✓ Custom brain training programs</li>
+          <li>✓ Priority support + extended warranty</li>
         </ul>
-        <button class="btn-price primary">Pre-order</button>
+        <button class="btn-price primary">Secure Your Pro • $500 Deposit</button>
+        <p class="price-note">Remaining balance due at shipping</p>
       </div>
       <div class="price-card">
         <h3 class="price-model">NeuroWave Research</h3>
-        <p class="price-tagline">For researchers and institutions</p>
-        <div class="price-amount">Contact us</div>
+        <p class="price-tagline">For research institutions & enterprises</p>
+        <div class="price-amount">Custom Quote</div>
         <ul class="price-features">
-          <li>64-channel EEG sensors</li>
-          <li>Custom processing options</li>
-          <li>Raw data export</li>
-          <li>API access</li>
-          <li>White-label options</li>
-          <li>Dedicated support</li>
+          <li>✓ <strong>Everything in Pro, plus:</strong></li>
+          <li>✓ 64-channel EEG sensors (medical-grade)</li>
+          <li>✓ Custom processing & algorithms</li>
+          <li>✓ Raw data export & API access</li>
+          <li>✓ White-label & custom branding</li>
+          <li>✓ Bulk pricing available</li>
+          <li>✓ Dedicated account manager</li>
+          <li>✓ Training & integration support</li>
         </ul>
-        <button class="btn-price">Contact Sales</button>
+        <button class="btn-price">Contact Sales Team</button>
+        <p class="price-note">Tailored solutions for your organization</p>
       </div>
+    </div>
+    <div class="pricing-guarantee">
+      <h3 class="guarantee-title">🛡️ Our Iron-Clad Guarantee</h3>
+      <p class="guarantee-text">
+        Try NeuroWave risk-free for 30 days. If you don't see measurable improvement in focus, stress management,
+        or mental performance, return it for a full refund. No questions asked. We're that confident it will
+        transform your life.
+      </p>
     </div>
   </section>
 
@@ -265,10 +629,10 @@ document.querySelector('#app').innerHTML = `
   <!-- Waitlist Section -->
   <section class="waitlist-section">
     <div class="waitlist-content">
-      <h2 class="waitlist-title">Join the Waitlist</h2>
+      <h2 class="waitlist-title">Not Ready to Pre-Order Yet?</h2>
       <p class="waitlist-description">
-        Be the first to know when NeuroWave AI launches.<br />
-        Get exclusive early-bird pricing and priority access.
+        Join <strong>120,000+ people</strong> on the waitlist to stay updated.<br />
+        Get exclusive launch notifications, expert brain optimization tips, and special insider pricing when we go live.
       </p>
       <form class="waitlist-form" id="waitlistForm">
         <div class="form-group">
@@ -276,18 +640,18 @@ document.querySelector('#app').innerHTML = `
             type="email"
             id="emailInput"
             class="email-input"
-            placeholder="Enter your email address"
+            placeholder="Enter your email to stay in the loop"
             required
             autocomplete="email"
           />
-          <button type="submit" class="btn-waitlist">Join Waitlist</button>
+          <button type="submit" class="btn-waitlist">Join Free Waitlist</button>
         </div>
-        <p class="form-note">We respect your privacy. No spam, ever.</p>
+        <p class="form-note">✓ Exclusive insider updates • ✓ No spam, ever • ✓ Unsubscribe anytime</p>
       </form>
       <div class="success-message" id="successMessage">
         <div class="success-icon">✓</div>
-        <h3>You're on the list!</h3>
-        <p>Thank you for joining the waitlist. We'll notify you as soon as NeuroWave AI is available.</p>
+        <h3>Welcome to the NeuroWave Community!</h3>
+        <p>You're officially on the list. Check your inbox for a special welcome gift and insider tips to start optimizing your brain today.</p>
       </div>
     </div>
   </section>
@@ -356,7 +720,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe all feature sections
 setTimeout(() => {
-  document.querySelectorAll('.feature-section, .specs-section, .pricing-section').forEach(section => {
+  document.querySelectorAll('.feature-section, .why-section, .use-cases-section, .social-proof-section, .limited-offer-section, .specs-section, .pricing-section').forEach(section => {
     observer.observe(section)
   })
 }, 100)
@@ -379,8 +743,8 @@ window.addEventListener('scroll', () => {
 
 // Enhanced parallax effect with multiple layers
 const parallaxLayers = {
-  slow: document.querySelectorAll('.feature-visual, .ai-chip-visual, .dashboard-visual, .privacy-visual'),
-  medium: document.querySelectorAll('.feature-section'),
+  slow: document.querySelectorAll('.feature-visual, .ai-chip-visual, .dashboard-visual, .privacy-visual, .benefit-card, .use-case-card, .testimonial-card'),
+  medium: document.querySelectorAll('.feature-section, .why-section, .use-cases-section'),
   fast: document.querySelectorAll('.hero::before, .hero::after')
 }
 
