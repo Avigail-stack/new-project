@@ -5,14 +5,24 @@ document.querySelector('#app').innerHTML = `
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">
-        <div class="logo-spinner"></div>
-        <span class="logo-text">STUDIO</span>
+        <div class="brain-logo">
+          <div class="brain-pulse"></div>
+          <svg viewBox="0 0 40 40" class="brain-icon">
+            <path d="M20 5C14 5 9 10 9 16c0 4 2 7 5 9v10h12V25c3-2 5-5 5-9 0-6-5-11-11-11z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M15 20c-2-1-3-3-3-5s2-5 5-5M25 20c2-1 3-3 3-5s-2-5-5-5" fill="none" stroke="currentColor" stroke-width="1"/>
+            <circle cx="16" cy="14" r="1.5" fill="currentColor"/>
+            <circle cx="24" cy="14" r="1.5" fill="currentColor"/>
+            <path d="M14 35h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M15 38h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="logo-text">NEUROWAVE</span>
       </a>
       <div class="nav-links">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#technology" class="nav-link">Technology</a>
+        <a href="#specs" class="nav-link">Specs</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
       </div>
       <button class="mobile-menu-btn" aria-label="Toggle menu">
         <span class="hamburger"></span>
@@ -22,191 +32,320 @@ document.querySelector('#app').innerHTML = `
 
   <!-- Mobile Menu -->
   <div class="mobile-menu">
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#services" class="mobile-link">Services</a>
-    <a href="#portfolio" class="mobile-link">Portfolio</a>
-    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#features" class="mobile-link">Features</a>
+    <a href="#technology" class="mobile-link">Technology</a>
+    <a href="#specs" class="mobile-link">Specs</a>
+    <a href="#pricing" class="mobile-link">Pricing</a>
   </div>
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-background">
+      <div class="neural-network"></div>
       <div class="gradient-orb orb-1"></div>
       <div class="gradient-orb orb-2"></div>
       <div class="gradient-orb orb-3"></div>
-      <div class="grid-overlay"></div>
+      <div class="brainwave-lines">
+        <div class="wave-line"></div>
+        <div class="wave-line"></div>
+        <div class="wave-line"></div>
+        <div class="wave-line"></div>
+        <div class="wave-line"></div>
+      </div>
     </div>
     <div class="hero-content">
+      <div class="product-badge" data-animate>
+        <span class="badge-pulse"></span>
+        <span>AI-Powered Neural Technology</span>
+      </div>
       <h1 class="hero-title" data-animate>
-        <span class="title-line">MAXIMIZE</span>
-        <span class="title-line accent">YOUR POTENTIAL</span>
+        <span class="title-line">READ YOUR</span>
+        <span class="title-line accent">BRAIN WAVES</span>
       </h1>
       <p class="hero-subtitle" data-animate>
-        Creative studio specializing in digital experiences, brand identity, and innovative solutions that transform ideas into reality.
+        The world's first consumer AI-powered brain wave signal reader. Decode your thoughts, optimize your focus, and unlock the full potential of your mind.
       </p>
       <div class="hero-cta" data-animate>
-        <a href="#portfolio" class="btn btn-primary">View Work</a>
-        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        <a href="#pricing" class="btn btn-primary">
+          <span>Pre-Order Now</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#technology" class="btn btn-secondary">
+          <span>See How It Works</span>
+        </a>
+      </div>
+      <div class="hero-stats" data-animate>
+        <div class="hero-stat">
+          <span class="stat-value">99.7%</span>
+          <span class="stat-desc">Accuracy</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-value">< 1ms</span>
+          <span class="stat-desc">Latency</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-value">8+</span>
+          <span class="stat-desc">Channels</span>
+        </div>
       </div>
     </div>
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
-      <span>Scroll</span>
+      <span>Explore</span>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="section-container">
-      <div class="about-grid">
-        <div class="about-visual" data-animate>
-          <div class="rotating-element">
-            <svg viewBox="0 0 200 200" class="abstract-shape">
-              <circle cx="100" cy="100" r="80" fill="none" stroke="var(--color-cyan)" stroke-width="0.5"/>
-              <circle cx="100" cy="100" r="60" fill="none" stroke="var(--color-green)" stroke-width="0.5"/>
-              <circle cx="100" cy="100" r="40" fill="none" stroke="var(--color-magenta)" stroke-width="0.5"/>
-              <line x1="100" y1="20" x2="100" y2="180" stroke="var(--color-cyan)" stroke-width="0.3" opacity="0.5"/>
-              <line x1="20" y1="100" x2="180" y2="100" stroke="var(--color-cyan)" stroke-width="0.3" opacity="0.5"/>
-            </svg>
-          </div>
-          <div class="floating-badge">
-            <span class="badge-number">10+</span>
-            <span class="badge-text">Years Experience</span>
-          </div>
-        </div>
-        <div class="about-content" data-animate>
-          <span class="section-tag">About Us</span>
-          <h2 class="section-title">We Create Digital Experiences That Matter</h2>
-          <p class="section-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-          </p>
-          <p class="section-text">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-          </p>
-          <div class="stats-row">
-            <div class="stat-item">
-              <span class="stat-number" data-count="150">0</span>
-              <span class="stat-label">Projects Done</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-count="80">0</span>
-              <span class="stat-label">Happy Clients</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-count="15">0</span>
-              <span class="stat-label">Awards Won</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services-section" id="services">
+  <!-- Features Section -->
+  <section class="features-section" id="features">
     <div class="section-container">
       <div class="section-header" data-animate>
-        <span class="section-tag">What We Do</span>
-        <h2 class="section-title centered">Our Services</h2>
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title centered">Unlock Your Mind's Potential</h2>
+        <p class="section-subtitle">Advanced neural signal processing meets elegant design</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card" data-animate>
-          <div class="service-icon">
+      <div class="features-grid">
+        <div class="feature-card featured" data-animate>
+          <div class="feature-visual">
+            <div class="ai-brain">
+              <svg viewBox="0 0 120 120" class="brain-svg">
+                <defs>
+                  <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:var(--color-cyan)"/>
+                    <stop offset="100%" style="stop-color:var(--color-magenta)"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="60" cy="60" r="50" fill="none" stroke="url(#brainGrad)" stroke-width="0.5" class="pulse-ring"/>
+                <circle cx="60" cy="60" r="40" fill="none" stroke="url(#brainGrad)" stroke-width="0.5" class="pulse-ring" style="animation-delay: 0.5s"/>
+                <circle cx="60" cy="60" r="30" fill="none" stroke="url(#brainGrad)" stroke-width="0.5" class="pulse-ring" style="animation-delay: 1s"/>
+                <path d="M60 20c-22 0-40 18-40 40s18 40 40 40 40-18 40-40-18-40-40-40zm0 10c16.5 0 30 13.5 30 30s-13.5 30-30 30-30-13.5-30-30 13.5-30 30-30z" fill="none" stroke="var(--color-cyan)" stroke-width="0.3"/>
+                <circle cx="45" cy="45" r="3" fill="var(--color-cyan)" class="neuron"/>
+                <circle cx="75" cy="45" r="3" fill="var(--color-magenta)" class="neuron"/>
+                <circle cx="60" cy="75" r="3" fill="var(--color-green)" class="neuron"/>
+                <circle cx="40" cy="65" r="2" fill="var(--color-cyan)" class="neuron"/>
+                <circle cx="80" cy="65" r="2" fill="var(--color-magenta)" class="neuron"/>
+                <line x1="45" y1="45" x2="75" y2="45" stroke="var(--color-cyan)" stroke-width="0.5" class="synapse"/>
+                <line x1="45" y1="45" x2="60" y2="75" stroke="var(--color-green)" stroke-width="0.5" class="synapse"/>
+                <line x1="75" y1="45" x2="60" y2="75" stroke="var(--color-magenta)" stroke-width="0.5" class="synapse"/>
+              </svg>
+            </div>
+          </div>
+          <div class="feature-content">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2a10 10 0 0 0-10 10c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">AI-Powered Analysis</h3>
+            <p class="feature-desc">Our proprietary deep learning algorithms analyze 8 channels of neural data in real-time, identifying patterns invisible to conventional EEG systems.</p>
+          </div>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
             </svg>
           </div>
-          <h3 class="service-title">Brand Identity</h3>
-          <p class="service-desc">Creating unique visual identities that capture the essence of your brand and resonate with your audience.</p>
-          <a href="#" class="service-link">Learn More <span class="arrow">→</span></a>
+          <h3 class="feature-title">Real-Time Processing</h3>
+          <p class="feature-desc">Sub-millisecond latency ensures instantaneous feedback for meditation, focus training, and cognitive enhancement applications.</p>
         </div>
-        <div class="service-card" data-animate>
-          <div class="service-icon">
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">24/7 Sleep Tracking</h3>
+          <p class="feature-desc">Monitor your sleep stages, dream patterns, and recovery metrics with medical-grade accuracy throughout the night.</p>
+        </div>
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <rect x="2" y="3" width="20" height="14" rx="2"/>
               <path d="M8 21h8M12 17v4"/>
             </svg>
           </div>
-          <h3 class="service-title">Web Design</h3>
-          <p class="service-desc">Designing responsive, user-friendly websites that deliver exceptional digital experiences.</p>
-          <a href="#" class="service-link">Learn More <span class="arrow">→</span></a>
+          <h3 class="feature-title">Cross-Platform Sync</h3>
+          <p class="feature-desc">Seamlessly sync your neural data across iOS, Android, macOS, and Windows. Your mind, everywhere you go.</p>
         </div>
-        <div class="service-card" data-animate>
-          <div class="service-icon">
+        <div class="feature-card" data-animate>
+          <div class="feature-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
-          <h3 class="service-title">Digital Marketing</h3>
-          <p class="service-desc">Strategic marketing solutions to amplify your online presence and drive meaningful engagement.</p>
-          <a href="#" class="service-link">Learn More <span class="arrow">→</span></a>
-        </div>
-        <div class="service-card" data-animate>
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-            </svg>
-          </div>
-          <h3 class="service-title">Creative Direction</h3>
-          <p class="service-desc">Guiding creative vision from concept to execution, ensuring cohesive and impactful results.</p>
-          <a href="#" class="service-link">Learn More <span class="arrow">→</span></a>
+          <h3 class="feature-title">Privacy First</h3>
+          <p class="feature-desc">End-to-end encryption and on-device processing ensure your most intimate neural data never leaves your control.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-  <section class="portfolio-section" id="portfolio">
+  <!-- Technology Section -->
+  <section class="technology-section" id="technology">
+    <div class="section-container">
+      <div class="tech-grid">
+        <div class="tech-content" data-animate>
+          <span class="section-tag">The Science</span>
+          <h2 class="section-title">Neural AI That Understands You</h2>
+          <p class="section-text">
+            NeuroWave AI combines cutting-edge dry electrode technology with a custom-trained neural network that has analyzed over 10 million hours of brain wave data.
+          </p>
+          <p class="section-text">
+            Our AI doesn't just read signals—it learns your unique neural patterns, adapting to provide increasingly accurate insights about your cognitive state, emotional responses, and mental performance.
+          </p>
+          <div class="tech-features">
+            <div class="tech-feature">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                </svg>
+              </div>
+              <div class="tech-feature-content">
+                <h4>8-Channel Dry Electrodes</h4>
+                <p>Medical-grade sensors require no gel or preparation</p>
+              </div>
+            </div>
+            <div class="tech-feature">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="tech-feature-content">
+                <h4>On-Device Neural Engine</h4>
+                <p>Custom M2-class chip processes 50,000 samples/second</p>
+              </div>
+            </div>
+            <div class="tech-feature">
+              <div class="tech-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <div class="tech-feature-content">
+                <h4>Natural Language Insights</h4>
+                <p>AI explains your brain states in plain language</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tech-visual" data-animate>
+          <div class="device-mockup">
+            <div class="device-screen">
+              <div class="screen-content">
+                <div class="live-wave-container">
+                  <svg viewBox="0 0 300 100" class="live-wave" preserveAspectRatio="none">
+                    <path class="wave-path alpha" d="" fill="none" stroke="var(--color-cyan)" stroke-width="2"/>
+                    <path class="wave-path beta" d="" fill="none" stroke="var(--color-magenta)" stroke-width="2"/>
+                    <path class="wave-path theta" d="" fill="none" stroke="var(--color-green)" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="screen-stats">
+                  <div class="screen-stat">
+                    <span class="screen-label">Focus</span>
+                    <div class="progress-bar">
+                      <div class="progress-fill focus-progress"></div>
+                    </div>
+                    <span class="screen-value">87%</span>
+                  </div>
+                  <div class="screen-stat">
+                    <span class="screen-label">Calm</span>
+                    <div class="progress-bar">
+                      <div class="progress-fill calm-progress"></div>
+                    </div>
+                    <span class="screen-value">64%</span>
+                  </div>
+                  <div class="screen-stat">
+                    <span class="screen-label">Energy</span>
+                    <div class="progress-bar">
+                      <div class="progress-fill energy-progress"></div>
+                    </div>
+                    <span class="screen-value">92%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="device-glow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs Section -->
+  <section class="specs-section" id="specs">
     <div class="section-container">
       <div class="section-header" data-animate>
-        <span class="section-tag">Our Work</span>
-        <h2 class="section-title centered">Featured Projects</h2>
+        <span class="section-tag">Specifications</span>
+        <h2 class="section-title centered">Engineered for Excellence</h2>
       </div>
-      <div class="portfolio-grid">
-        <div class="portfolio-item large" data-animate>
-          <div class="portfolio-image" style="background: linear-gradient(135deg, var(--color-cyan), var(--color-dark));">
-            <div class="portfolio-overlay">
-              <span class="portfolio-category">Branding</span>
-              <h3 class="portfolio-title">Modern Tech Brand</h3>
-              <a href="#" class="portfolio-link">View Project</a>
-            </div>
+      <div class="specs-grid">
+        <div class="spec-card" data-animate>
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
           </div>
+          <div class="spec-value">18h</div>
+          <div class="spec-label">Battery Life</div>
+          <div class="spec-detail">Continuous use with quick charge</div>
         </div>
-        <div class="portfolio-item" data-animate>
-          <div class="portfolio-image" style="background: linear-gradient(135deg, var(--color-magenta), var(--color-dark));">
-            <div class="portfolio-overlay">
-              <span class="portfolio-category">Web Design</span>
-              <h3 class="portfolio-title">E-Commerce Platform</h3>
-              <a href="#" class="portfolio-link">View Project</a>
-            </div>
+        <div class="spec-card" data-animate>
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
           </div>
+          <div class="spec-value">8</div>
+          <div class="spec-label">EEG Channels</div>
+          <div class="spec-detail">Medical-grade dry electrodes</div>
         </div>
-        <div class="portfolio-item" data-animate>
-          <div class="portfolio-image" style="background: linear-gradient(135deg, var(--color-green), var(--color-dark));">
-            <div class="portfolio-overlay">
-              <span class="portfolio-category">Marketing</span>
-              <h3 class="portfolio-title">Campaign Launch</h3>
-              <a href="#" class="portfolio-link">View Project</a>
-            </div>
+        <div class="spec-card" data-animate>
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
           </div>
+          <div class="spec-value">0.8ms</div>
+          <div class="spec-label">Latency</div>
+          <div class="spec-detail">Real-time neural processing</div>
         </div>
-        <div class="portfolio-item" data-animate>
-          <div class="portfolio-image" style="background: linear-gradient(135deg, var(--color-cyan), var(--color-magenta));">
-            <div class="portfolio-overlay">
-              <span class="portfolio-category">Identity</span>
-              <h3 class="portfolio-title">Startup Rebrand</h3>
-              <a href="#" class="portfolio-link">View Project</a>
-            </div>
+        <div class="spec-card" data-animate>
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <path d="M9 9h6v6H9z"/>
+            </svg>
           </div>
+          <div class="spec-value">M2</div>
+          <div class="spec-label">Neural Chip</div>
+          <div class="spec-detail">Custom AI accelerator</div>
         </div>
-        <div class="portfolio-item large" data-animate>
-          <div class="portfolio-image" style="background: linear-gradient(135deg, var(--color-green), var(--color-cyan));">
-            <div class="portfolio-overlay">
-              <span class="portfolio-category">Digital</span>
-              <h3 class="portfolio-title">Interactive Experience</h3>
-              <a href="#" class="portfolio-link">View Project</a>
-            </div>
+        <div class="spec-card" data-animate>
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
           </div>
+          <div class="spec-value">50K</div>
+          <div class="spec-label">Samples/sec</div>
+          <div class="spec-detail">High-resolution capture</div>
+        </div>
+        <div class="spec-card" data-animate>
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.76z"/>
+              <path d="M16 8L2 22M17.5 15H9"/>
+            </svg>
+          </div>
+          <div class="spec-value">52g</div>
+          <div class="spec-label">Weight</div>
+          <div class="spec-detail">Featherlight comfort</div>
         </div>
       </div>
     </div>
@@ -216,40 +355,40 @@ document.querySelector('#app').innerHTML = `
   <section class="testimonials-section">
     <div class="section-container">
       <div class="section-header" data-animate>
-        <span class="section-tag">Testimonials</span>
-        <h2 class="section-title centered">What Clients Say</h2>
+        <span class="section-tag">Early Access</span>
+        <h2 class="section-title centered">What Researchers Say</h2>
       </div>
       <div class="testimonials-slider" data-animate>
         <div class="testimonial-card active">
           <div class="quote-icon">"</div>
-          <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. An exceptional team that delivers beyond expectations.</p>
+          <p class="testimonial-text">The signal quality rivals equipment costing 100x more. NeuroWave AI has fundamentally changed how we approach cognitive research.</p>
           <div class="testimonial-author">
             <div class="author-avatar"></div>
             <div class="author-info">
-              <span class="author-name">John Smith</span>
-              <span class="author-role">CEO, Tech Corp</span>
+              <span class="author-name">Dr. Sarah Chen</span>
+              <span class="author-role">Neuroscience Lead, Stanford</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="quote-icon">"</div>
-          <p class="testimonial-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Truly transformative work that exceeded our goals.</p>
+          <p class="testimonial-text">I've been tracking my focus patterns for 6 months. My productivity has increased 40% just by understanding when my brain performs best.</p>
           <div class="testimonial-author">
             <div class="author-avatar"></div>
             <div class="author-info">
-              <span class="author-name">Sarah Johnson</span>
-              <span class="author-role">Marketing Director</span>
+              <span class="author-name">Marcus Webb</span>
+              <span class="author-role">CEO, TechFlow Labs</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="quote-icon">"</div>
-          <p class="testimonial-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Professional, creative, and incredibly talented team.</p>
+          <p class="testimonial-text">The sleep insights alone are worth it. I finally understand why some nights leave me energized and others don't. Game changer.</p>
           <div class="testimonial-author">
             <div class="author-avatar"></div>
             <div class="author-info">
-              <span class="author-name">Michael Chen</span>
-              <span class="author-role">Founder, StartupXYZ</span>
+              <span class="author-name">Dr. Yuki Tanaka</span>
+              <span class="author-role">Sleep Researcher, MIT</span>
             </div>
           </div>
         </div>
@@ -262,75 +401,97 @@ document.querySelector('#app').innerHTML = `
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact-section" id="contact">
+  <!-- Pricing Section -->
+  <section class="pricing-section" id="pricing">
     <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-info" data-animate>
-          <span class="section-tag">Get in Touch</span>
-          <h2 class="section-title">Let's Work Together</h2>
-          <p class="section-text">Have a project in mind? We'd love to hear about it. Drop us a line and let's create something amazing together.</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <span>hello@studio.com</span>
-            </div>
-            <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <span>+1 (555) 123-4567</span>
-            </div>
-            <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>123 Creative Street, Design City</span>
-            </div>
+      <div class="section-header" data-animate>
+        <span class="section-tag">Pre-Order</span>
+        <h2 class="section-title centered">Choose Your Experience</h2>
+        <p class="section-subtitle">Limited early-bird pricing for founding members</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card" data-animate>
+          <div class="pricing-header">
+            <h3 class="pricing-tier">Explorer</h3>
+            <p class="pricing-desc">Perfect for curious minds</p>
           </div>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-            </a>
+          <div class="pricing-amount">
+            <span class="currency">$</span>
+            <span class="price">399</span>
+            <span class="period">one-time</span>
           </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> NeuroWave AI Headband</li>
+            <li><span class="check">✓</span> 4-Channel EEG</li>
+            <li><span class="check">✓</span> Mobile App (iOS/Android)</li>
+            <li><span class="check">✓</span> Basic Sleep Tracking</li>
+            <li><span class="check">✓</span> Focus Training Games</li>
+            <li class="disabled"><span class="check">—</span> Advanced Analytics</li>
+            <li class="disabled"><span class="check">—</span> API Access</li>
+          </ul>
+          <a href="#" class="btn btn-secondary btn-full">Pre-Order Explorer</a>
         </div>
-        <div class="contact-form-wrapper" data-animate>
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <input type="text" id="name" name="name" required placeholder=" ">
-              <label for="name">Your Name</label>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" required placeholder=" ">
-              <label for="email">Email Address</label>
-            </div>
-            <div class="form-group">
-              <input type="text" id="subject" name="subject" placeholder=" ">
-              <label for="subject">Subject</label>
-            </div>
-            <div class="form-group">
-              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-              <label for="message">Your Message</label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">
-              <span>Send Message</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            </button>
-          </form>
+        <div class="pricing-card featured" data-animate>
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-header">
+            <h3 class="pricing-tier">Professional</h3>
+            <p class="pricing-desc">For serious biohackers</p>
+          </div>
+          <div class="pricing-amount">
+            <span class="currency">$</span>
+            <span class="price">699</span>
+            <span class="period">one-time</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> NeuroWave AI Pro Headband</li>
+            <li><span class="check">✓</span> 8-Channel EEG</li>
+            <li><span class="check">✓</span> All Platform Apps</li>
+            <li><span class="check">✓</span> Advanced Sleep Analysis</li>
+            <li><span class="check">✓</span> AI Coaching & Insights</li>
+            <li><span class="check">✓</span> Advanced Analytics Dashboard</li>
+            <li><span class="check">✓</span> 1 Year Premium Subscription</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-full">Pre-Order Professional</a>
         </div>
+        <div class="pricing-card" data-animate>
+          <div class="pricing-header">
+            <h3 class="pricing-tier">Research</h3>
+            <p class="pricing-desc">For labs & institutions</p>
+          </div>
+          <div class="pricing-amount">
+            <span class="currency">$</span>
+            <span class="price">1,499</span>
+            <span class="period">one-time</span>
+          </div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> NeuroWave AI Research Kit</li>
+            <li><span class="check">✓</span> 8-Channel + Reference</li>
+            <li><span class="check">✓</span> Raw Data Export</li>
+            <li><span class="check">✓</span> Full API Access</li>
+            <li><span class="check">✓</span> Python/MATLAB SDK</li>
+            <li><span class="check">✓</span> Priority Support</li>
+            <li><span class="check">✓</span> Institutional License</li>
+          </ul>
+          <a href="#" class="btn btn-secondary btn-full">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="section-container">
+      <div class="cta-content" data-animate>
+        <h2 class="cta-title">Ready to Read Your Mind?</h2>
+        <p class="cta-subtitle">Join 50,000+ early adopters exploring the frontier of neural technology. Ships Q2 2025.</p>
+        <div class="cta-form">
+          <input type="email" placeholder="Enter your email" class="cta-input" id="waitlistEmail">
+          <button class="btn btn-primary" id="waitlistBtn">
+            <span>Join Waitlist</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <p class="cta-disclaimer">No spam, ever. We'll only email you about major updates and shipping.</p>
       </div>
     </div>
   </section>
@@ -341,40 +502,45 @@ document.querySelector('#app').innerHTML = `
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <div class="logo-spinner small"></div>
-            <span class="logo-text">STUDIO</span>
+            <div class="brain-logo small">
+              <svg viewBox="0 0 40 40" class="brain-icon">
+                <path d="M20 5C14 5 9 10 9 16c0 4 2 7 5 9v10h12V25c3-2 5-5 5-9 0-6-5-11-11-11z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <span class="logo-text">NEUROWAVE</span>
           </a>
-          <p class="footer-tagline">Creating digital experiences that inspire and transform.</p>
+          <p class="footer-tagline">Pioneering the future of human-computer neural interfaces.</p>
         </div>
         <div class="footer-links-grid">
           <div class="footer-column">
-            <h4>Navigation</h4>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#technology">Technology</a>
+            <a href="#specs">Specifications</a>
+            <a href="#pricing">Pricing</a>
           </div>
           <div class="footer-column">
-            <h4>Services</h4>
-            <a href="#">Brand Identity</a>
-            <a href="#">Web Design</a>
-            <a href="#">Digital Marketing</a>
-            <a href="#">Creative Direction</a>
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press Kit</a>
+            <a href="#">Blog</a>
           </div>
           <div class="footer-column">
-            <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
+            <h4>Support</h4>
+            <a href="#">Documentation</a>
+            <a href="#">API Reference</a>
+            <a href="#">Contact</a>
+            <a href="#">FAQ</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Studio. All rights reserved.</p>
+        <p>&copy; 2025 NeuroWave AI. All rights reserved.</p>
         <div class="footer-social">
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">X</a>
           <a href="#" aria-label="LinkedIn">LI</a>
+          <a href="#" aria-label="Discord">DC</a>
         </div>
       </div>
     </div>
@@ -454,11 +620,6 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-
-      // Animate counters when stats come into view
-      if (entry.target.querySelector('.stat-number')) {
-        animateCounters(entry.target);
-      }
     }
   });
 }, observerOptions);
@@ -466,35 +627,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-animate]').forEach(el => {
   observer.observe(el);
 });
-
-// Counter Animation
-function animateCounters(container) {
-  const counters = container.querySelectorAll('.stat-number[data-count]');
-  counters.forEach(counter => {
-    if (counter.dataset.animated) return;
-    counter.dataset.animated = 'true';
-
-    const target = parseInt(counter.dataset.count);
-    const duration = 2000;
-    const start = 0;
-    const startTime = performance.now();
-
-    function updateCounter(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(start + (target - start) * easeOut);
-
-      counter.textContent = current + '+';
-
-      if (progress < 1) {
-        requestAnimationFrame(updateCounter);
-      }
-    }
-
-    requestAnimationFrame(updateCounter);
-  });
-}
 
 // Testimonial Slider
 const testimonialCards = document.querySelectorAll('.testimonial-card');
@@ -531,30 +663,80 @@ setInterval(() => {
   showTestimonial(currentTestimonial);
 }, 5000);
 
-// Contact Form Handling
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+// Live Brainwave Animation
+function animateBrainwaves() {
+  const wavePaths = document.querySelectorAll('.wave-path');
+  const width = 300;
+  const height = 100;
+  let time = 0;
 
-  const btn = contactForm.querySelector('button[type="submit"]');
-  const originalText = btn.innerHTML;
+  function generateWavePath(frequency, amplitude, phase, yOffset) {
+    let path = `M 0 ${height / 2 + yOffset}`;
+    for (let x = 0; x <= width; x += 2) {
+      const y = height / 2 + yOffset +
+                Math.sin((x / width) * Math.PI * frequency + time + phase) * amplitude +
+                Math.sin((x / width) * Math.PI * frequency * 2.5 + time * 1.5 + phase) * (amplitude * 0.3);
+      path += ` L ${x} ${y}`;
+    }
+    return path;
+  }
 
-  btn.innerHTML = '<span>Sending...</span>';
-  btn.disabled = true;
+  function animate() {
+    time += 0.05;
 
-  // Simulate form submission
-  setTimeout(() => {
-    btn.innerHTML = '<span>Message Sent!</span>';
-    btn.classList.add('success');
-    contactForm.reset();
+    if (wavePaths[0]) wavePaths[0].setAttribute('d', generateWavePath(4, 15, 0, -15));
+    if (wavePaths[1]) wavePaths[1].setAttribute('d', generateWavePath(6, 10, Math.PI / 3, 0));
+    if (wavePaths[2]) wavePaths[2].setAttribute('d', generateWavePath(3, 12, Math.PI / 2, 15));
 
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.disabled = false;
-      btn.classList.remove('success');
-    }, 3000);
-  }, 1500);
-});
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+}
+
+// Progress bar animations
+function animateProgressBars() {
+  const focusProgress = document.querySelector('.focus-progress');
+  const calmProgress = document.querySelector('.calm-progress');
+  const energyProgress = document.querySelector('.energy-progress');
+
+  function randomize() {
+    if (focusProgress) {
+      focusProgress.style.width = `${70 + Math.random() * 25}%`;
+    }
+    if (calmProgress) {
+      calmProgress.style.width = `${50 + Math.random() * 30}%`;
+    }
+    if (energyProgress) {
+      energyProgress.style.width = `${75 + Math.random() * 20}%`;
+    }
+  }
+
+  randomize();
+  setInterval(randomize, 3000);
+}
+
+// Waitlist form handling
+const waitlistBtn = document.getElementById('waitlistBtn');
+const waitlistEmail = document.getElementById('waitlistEmail');
+
+if (waitlistBtn && waitlistEmail) {
+  waitlistBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const email = waitlistEmail.value;
+
+    if (email && email.includes('@')) {
+      waitlistBtn.innerHTML = '<span>Joined!</span>';
+      waitlistBtn.classList.add('success');
+      waitlistEmail.value = '';
+
+      setTimeout(() => {
+        waitlistBtn.innerHTML = '<span>Join Waitlist</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        waitlistBtn.classList.remove('success');
+      }, 3000);
+    }
+  });
+}
 
 // Parallax Effect on Hero
 const hero = document.querySelector('.hero');
@@ -594,4 +776,6 @@ hero.addEventListener('mousemove', (e) => {
 // Add loaded class to body for initial animations
 window.addEventListener('load', () => {
   document.body.classList.add('loaded');
+  animateBrainwaves();
+  animateProgressBars();
 });
